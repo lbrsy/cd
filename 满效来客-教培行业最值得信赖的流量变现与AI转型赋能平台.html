@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>满效来客 - 教培行业最值得信赖的流量变现与AI转型赋能平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        /* 头部导航 */
+        .header {
+            background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #ffd700;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            color: #ffd700;
+        }
+        
+        /* 主横幅 */
+        .hero-banner {
+            background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 50%, #62a0ea 100%);
+            padding: 150px 20px 100px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero-banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-banner .tagline {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-banner .slogan {
+            font-size: 20px;
+            background: rgba(255,215,0,0.2);
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: 2px solid #ffd700;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        /* 数据展示区 */
+        .stats-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: bold;
+            color: #1a5fb4;
+            margin-bottom: 10px;
+        }
+        
+        .stat-number span {
+            font-size: 24px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 通用section样式 */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #1a5fb4;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #1a5fb4, #ffd700);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            margin-top: 20px;
+        }
+        
+        /* 公司介绍 */
+        .about-section {
+            background: #fff;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 16px;
+            line-height: 2;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-text .highlight {
+            color: #1a5fb4;
+            font-weight: bold;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+            border-radius: 20px;
+            padding: 40px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .about-image h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .about-image .team-photo {
+            width: 100%;
+            height: 300px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            border: 2px dashed rgba(255,255,255,0.3);
+        }
+        
+        /* 发展历程 */
+        .timeline-section {
+            background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #1a5fb4, #ffd700);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            padding: 25px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 5%;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 5%;
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #1a5fb4, #3584e4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 5px 20px rgba(26,95,180,0.4);
+            z-index: 1;
+        }
+        
+        .timeline-content h4 {
+            color: #1a5fb4;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        /* 企业文化 */
+        .culture-section {
+            background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+            padding: 80px 20px;
+            color: #fff;
+        }
+        
+        .culture-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .culture-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .culture-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .culture-icon {
+            width: 70px;
+            height: 70px;
+            background: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+        
+        .culture-item h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        
+        .culture-item p {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        /* 业务介绍 */
+        .services-section {
+            background: #fff;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            border-color: #1a5fb4;
+            box-shadow: 0 15px 40px rgba(26,95,180,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1a5fb4, #3584e4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 35px;
+            color: #fff;
+        }
+        
+        .service-card h4 {
+            font-size: 20px;
+            color: #1a5fb4;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* 服务领域 */
+        .domains-section {
+            background: #f8f9fa;
+        }
+        
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        
+        .domain-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .domain-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(26,95,180,0.15);
+        }
+        
+        .domain-item h5 {
+            color: #1a5fb4;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .domain-item p {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* 红宝书区域 */
+        .book-section {
+            background: linear-gradient(135deg, #c9302c 0%, #e74c3c 100%);
+            padding: 80px 20px;
+            color: #fff;
+        }
+        
+        .book-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .book-image {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .book-cover {
+            width: 200px;
+            height: 280px;
+            background: linear-gradient(135deg, #b71c1c, #e53935);
+            border-radius: 5px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid #ffd700;
+        }
+        
+        .book-cover span {
+            writing-mode: vertical-rl;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        
+        .book-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .book-content p {
+            font-size: 16px;
+            line-height: 2;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .book-features {
+            list-style: none;
+        }
+        
+        .book-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .book-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        /* CTA区域 */
+        .cta-section {
+            background: linear-gradient(135deg, #1a5fb4 0%, #3584e4 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section .highlight-text {
+            font-size: 24px;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 18px 50px;
+            background: #ffd700;
+            color: #1a5fb4;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        /* 页脚 */
+        .footer {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 50px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .footer h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            line-height: 2;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            color: #ffd700;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .domains-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .culture-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-banner h1 {
+                font-size: 32px;
+            }
+            
+            .hero-banner .tagline {
+                font-size: 18px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 50px);
+                margin-left: 50px !important;
+                margin-right: 0 !important;
+            }
+            
+            .timeline-year {
+                left: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 12px;
+            }
+            
+            .services-grid,
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .domains-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .book-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">满效<span>来客</span></a>
+            <ul class="nav-menu">
+                <li><a href="#about">公司介绍</a></li>
+                <li><a href="#timeline">发展历程</a></li>
+                <li><a href="#culture">企业文化</a></li>
+                <li><a href="#services">业务介绍</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 主横幅 -->
+    <section class="hero-banner">
+        <h1>满效来客</h1>
+        <p class="tagline">教培行业最值得信赖的流量变现与AI转型赋能平台</p>
+        <div class="slogan">不为知识付费，只做流量实战</div>
+    </section>
+
+    <!-- 数据展示区 -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">8<span>年</span></div>
+                <div class="stat-label">专注教培抖音变现</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">30000<span>+</span></div>
+                <div class="stat-label">服务教培从业者</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2000<span>+</span></div>
+                <div class="stat-label">累计孵化教培IP</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">7000<span>万+</span></div>
+                <div class="stat-label">总GMV突破</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司介绍 -->
+    <section class="section about-section" id="about">
+        <div class="section-title">
+            <h2>公司介绍</h2>
+            <p>8年专注教培抖音变现，所有的坑我们都替你踩过了！</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>满效来客拥有一支专业的教培流量运营团队，他们来自五湖四海，有着多元的专业背景和丰富的行业经验，带着对教培行业的热爱和追求加入到"满效来客"这个大家庭。</p>
+                <p>有抖音运营专家级别，有教培一线实战经验丰富者，有曾经也是教培机构创业者，也有MCN机构操盘高手。他们年龄不等，但个个身经百战，绝对独当一面，身上燃烧着满效人特有的<span class="highlight">"专注精进，高效协同，数据驱动，崇尚实战"</span>的满效精神。</p>
+                <p><strong>满效来客</strong>，成立于2018年，深耕教培行业<span class="highlight">8年时间</span>，专注抖音变现领域，是教培行业抖音流量变现的头部机构。</p>
+                <p>公司致力于为教育机构提供<span class="highlight">抖音同城招生、短视频代运营、直播招生、教培IP孵化、AI智能化招生、品牌云连锁孵化</span>等一站式流量赋能服务。通过"落地实战+培训+陪跑+结果交付"的服务体系，真正帮助教培机构实现<span class="highlight">降本增效、业绩倍增</span>。</p>
+            </div>
+            <div class="about-image">
+                <h3>▲ 满效来客团队合照</h3>
+                <div class="team-photo">
+                    [ 团队合照区域 ]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section class="section timeline-section" id="timeline">
+        <div class="section-title">
+            <h2>发展历程</h2>
+            <p>8年专注教培抖音变现，见证行业变革与成长</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2018</div>
+                <div class="timeline-content">
+                    <h4>初创起航</h4>
+                    <p>团队成立，在抖音平台售卖招生课程及资料，累计服务3万+教培从业者，完成教培行业线上化的初步探索。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-content">
+                    <h4>线下落地</h4>
+                    <p>从线上走向线下，深度帮扶教培机构落地招生方案，累计服务120多家机构，验证"实战落地"模式的可行性。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h4>MCN布局</h4>
+                    <p>成立MCN机构，正式开启教培IP孵化业务，成功孵化10+教培腰部博主，目前已是垂直科目头部，建立起IP打造的方法论体系。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-content">
+                    <h4>同城爆发</h4>
+                    <p>全力投入抖音同城招生业务，首创3天落地代播招生，培养操盘手50+，总GMV完成7000多万，建立起"落地实战+培训+陪跑+结果交付"的服务体系。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2022</div>
+                <div class="timeline-content">
+                    <h4>多赛道运营</h4>
+                    <p>增加教育直播业务线，成功跑通5个教育细分赛道（万人在线规模）：家庭教育、兴趣班规划、数学直播、学业规划、同城直播，形成多赛道运营能力。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-content">
+                    <h4>行业头部</h4>
+                    <p>成功跻身教培付费流量招生头部机构。全年举办30多场线下实战，培训5000多家教培机构，累计深度赋能700+校区实现线上智能化招生。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h4>IP孵化爆发</h4>
+                    <p>教培IP孵化业务全面爆发，累计孵化2000+教培IP，成为教培行业内IP孵化的标杆机构。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-content">
+                    <h4>双引擎模式</h4>
+                    <p>抖音招生、品牌云连锁孵化、及教育IP孵化业务全面爆发，形成"流量获客+IP变现"双引擎商业模式，成为教培行业转型升级的首选合作伙伴。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <h4>共创生态（展望）</h4>
+                    <p>从"教培流量赋能平台"全面深度升级为"教培共创生态平台"。以流量能力为抓手，让更多优秀合伙人实现个人IP价值最大化和项目规模化变现。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业文化 -->
+    <section class="culture-section" id="culture">
+        <div class="section-title" style="color: #fff;">
+            <h2 style="color: #ffd700;">企业文化</h2>
+            <p style="color: rgba(255,255,255,0.9);">利他共赢，知行合一</p>
+        </div>
+        <div class="culture-grid">
+            <div class="culture-item">
+                <div class="culture-icon">🎯</div>
+                <h4>企业愿景</h4>
+                <p>成为教培行业最值得信赖的流量变现与AI转型赋能平台</p>
+            </div>
+            <div class="culture-item">
+                <div class="culture-icon">🚀</div>
+                <h4>企业使命</h4>
+                <p>助力10万教培人用AI与IP实现降本增效80%，业绩提升10倍以上，轻松赚钱，幸福创业，行稳致远</p>
+            </div>
+            <div class="culture-item">
+                <div class="culture-icon">💪</div>
+                <h4>企业精神</h4>
+                <p>专注精进，高效协同，数据驱动，崇尚实战</p>
+            </div>
+            <div class="culture-item">
+                <div class="culture-icon">⭐</div>
+                <h4>企业价值观</h4>
+                <p>利他共赢，知行合一</p>
+            </div>
+            <div class="culture-item">
+                <div class="culture-icon">👑</div>
+                <h4>企业宗旨</h4>
+                <p>客户第一，深度交付，结果为王</p>
+            </div>
+            <div class="culture-item">
+                <div class="culture-icon">📢</div>
+                <h4>企业口号</h4>
+                <p>不为知识付费，只做流量实战</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务介绍 -->
+    <section class="section services-section" id="services">
+        <div class="section-title">
+            <h2>业务介绍</h2>
+            <p>一站式流量赋能服务，助力教培机构生源暴增</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h4>抖音同城招生</h4>
+                <p>首创3天落地代播招生，专业操盘手团队上门服务，快速打通本地流量，实现精准获客，效果付费，结果为王。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌟</div>
+                <h4>教培IP孵化</h4>
+                <p>成熟的IP打造方法论体系，从账号定位、内容策划、拍摄剪辑到流量变现，一站式孵化教培行业个人IP。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h4>AI智能化招生</h4>
+                <p>利用AI技术赋能教培机构，实现智能化内容生产、客户管理、运营分析，真正做到降本增效80%。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h4>品牌云连锁孵化</h4>
+                <p>帮助优质教培品牌实现线上品牌化、规模化发展，打造云连锁模式，实现项目规模化变现。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h4>商学院培训</h4>
+                <p>系统化培训课程体系，包含抖音同城招生实战营、教培IP打造特训营、直播变现大师班等王牌课程。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤝</div>
+                <h4>陪跑服务</h4>
+                <p>"落地实战+培训+陪跑+结果交付"全流程服务体系，从方案设计到执行落地，全程陪伴，确保结果交付。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务领域 -->
+    <section class="section domains-section">
+        <div class="section-title">
+            <h2>服务领域</h2>
+            <p>覆盖各类型素质教育及学科培训机构</p>
+        </div>
+        <div class="domains-grid">
+            <div class="domain-item">
+                <h5>🎨 艺术类</h5>
+                <p>美术、口才、舞蹈、声乐、表演、播音主持等</p>
+            </div>
+            <div class="domain-item">
+                <h5>🎵 音乐类</h5>
+                <p>钢琴、架子鼓、吉他、古筝、音乐启蒙等</p>
+            </div>
+            <div class="domain-item">
+                <h5>⚽ 体育类</h5>
+                <p>跆拳道、篮球、足球、乒乓球、羽毛球、游泳等</p>
+            </div>
+            <div class="domain-item">
+                <h5>🔬 科学类</h5>
+                <p>智力开发、机器人、编程等</p>
+            </div>
+            <div class="domain-item">
+                <h5>📖 学能类</h5>
+                <p>专注力、阅读、书法练字等</p>
+            </div>
+            <div class="domain-item">
+                <h5>📐 学科类</h5>
+                <p>数学、英语、语文等</p>
+            </div>
+            <div class="domain-item">
+                <h5>👨‍👩‍👧 家庭教育</h5>
+                <p>亲子关系、学业规划、兴趣班规划等</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 红宝书区域 -->
+    <section class="book-section">
+        <div class="book-container">
+            <div class="book-image">
+                <div class="book-cover">
+                    <span>教培行业·生源暴增·红宝书</span>
+                </div>
+            </div>
+            <div class="book-content">
+                <h3>《教培行业·生源暴增·红宝书》</h3>
+                <p>这不是一本空洞的理论书，也不是讲概念的大框架——它是一套面向增长的一线实操指南，实现实操过程无卡点的系统实操指南！</p>
+                <ul class="book-features">
+                    <li>从0理解抖音来客到底是什么</li>
+                    <li>弄清机构怎么做同城流量</li>
+                    <li>用正确的方法搭建短视频与直播转化链路</li>
+                    <li>避免90%机构都会踩的运营坑</li>
+                    <li>通过内容、流量、商品、转化"四驾马车"实现生源指数级增长</li>
+                    <li>学会用平台规则做增长，而不是被规则限制</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="cta-section" id="contact">
+        <h2>缺流量，找满效！</h2>
+        <p class="highlight-text">专注精进，绝对专业；数据驱动，崇尚实战</p>
+        <p>AI赋能，不断创新；深度交付，结果为王！</p>
+        <p><strong>满效来客，助力教培机构生源暴增！</strong></p>
+        <a href="#" class="cta-button">立即咨询</a>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>关于满效来客</h4>
+                <p>满效来客成立于2018年，8年专注教培抖音变现，是教培行业最值得信赖的流量变现与AI转型赋能平台。通过"落地实战+培训+陪跑+结果交付"的服务体系，真正帮助教培机构实现降本增效、业绩倍增。</p>
+            </div>
+            <div>
+                <h4>快速导航</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">公司介绍</a></li>
+                    <li><a href="#timeline">发展历程</a></li>
+                    <li><a href="#culture">企业文化</a></li>
+                    <li><a href="#services">业务介绍</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>联系方式</h4>
+                <ul class="footer-links">
+                    <li>📞 咨询热线：400-XXX-XXXX</li>
+                    <li>📧 邮箱：contact@manxiaolaike.com</li>
+                    <li>📍 地址：中国</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 满效来客 版权所有 | 不为知识付费，只做流量实战</p>
+        </div>
+    </footer>
+</body>
+</html>
